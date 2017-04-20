@@ -5,7 +5,18 @@
 // Factorials are often represented with the shorthand notation n!
 // For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
 
+function factorialize(num) {
+  if(num < 0) {
+    return 'Please enter a positive number';
+  }
+  var sum = 1;
+  for(var i=num; i>1; i--){
+    sum = sum*i;
+  }
+  return sum;
+}
 
+factorialize(5);
 
 
 // Tests
