@@ -25,7 +25,7 @@ function findLongestWord(str) {
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
 
-
+// Tests
 // findLongestWord("The quick brown fox jumped over the lazy dog") should return a number.
 // findLongestWord("The quick brown fox jumped over the lazy dog") should return 6.
 // findLongestWord("May the force be with you") should return 5.
