@@ -3,6 +3,19 @@
 // Check if a string (first argument, str) ends with the given target string (second argument, target).
 // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 
+function confirmEnding(str, target) {
+  var count = target.length-1;
+  for(var i = str.length-1; i >= 0; i--) {
+    if(count >= 0) {
+      if(target[count] != str[i]) {
+        return false;
+      }
+      count--;
+    }
+  }
+  return true;
+}
+confirmEnding("Bastian", "n");
 
 
 // Tests
