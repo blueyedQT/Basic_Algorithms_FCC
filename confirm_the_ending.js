@@ -28,6 +28,17 @@ function confirmEnding(str, target) {
 
 confirmEnding("Bastian", "n");
 
+// Function using substring()
+function confirmEnding(str, target) {
+  var subString = str.substring(str.length-target.length);
+  if(subString == target) {
+    return true;
+  }
+  return false;
+}
+
+confirmEnding("Bastian", "n");
+
 
 // Tests
 // confirmEnding("Bastian", "n") should return true.
