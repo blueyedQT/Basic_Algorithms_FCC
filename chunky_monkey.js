@@ -12,6 +12,23 @@ function chunkArrayInGroups(arr, size) {
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
+// Without using slice() method
+function chunkArrayInGroups(arr, size) {
+  var newArr = [];
+  for(var i=0; i<arr.length; i+=size) {
+    var miniArr = [];
+    for(var j = i; j < i+size; j++) {
+      if(j < arr.length) {
+        miniArr.push(arr[j]);
+      }
+    }
+    newArr.push(miniArr);
+  }
+  return newArr;
+}
+
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)); 
+
 
 // Tests
 // chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
