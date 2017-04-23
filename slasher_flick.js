@@ -11,6 +11,17 @@ function slasher(arr, howMany) {
 
 slasher([1, 2, 3], 2);
 
+// Second solution not using slice() method
+function slasher(arr, howMany) {
+  var remain = [];
+  for(var i = howMany; i < arr.length; i++) {
+    remain.push(arr[i]);
+  }
+  return remain;
+}
+
+console.log(slasher([1, 2, 3], 2));
+
 
 // Tests
 // slasher([1, 2, 3], 2) should return [3].
