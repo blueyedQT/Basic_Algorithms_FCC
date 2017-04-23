@@ -5,6 +5,24 @@
 // Note that inserting the three dots to the end will add to the string length.
 // However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
 
+function truncateString(str, num) {
+  var ending = "...";
+  var newStr = "";
+  if(num > 3) {
+    if(str.length <= num) {
+       newStr = str;
+    } else if(str.length + 3 > num) {
+      newStr = str.slice(0, num-3);
+      newStr += ending;
+    }
+  } else {
+    newStr = str.slice(0, num);
+    newStr += ending;
+  }
+  return newStr;
+}
+
+truncateString("A-", 1);
 
 
 // Tests
